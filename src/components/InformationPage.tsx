@@ -85,7 +85,7 @@ const InformationPage = () => {
                         Rick and Morty Characters
                     </Heading>
                     <Grid templateColumns={{md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)'}} gap={6}>
-                        {data.characters.results.map((character, i) => (
+                        {data?.characters?.results.map((character, i) => (
                             <CharacterCard
                                 key={i}
                                 character={character}
