@@ -21,14 +21,14 @@ const UserDisplay = ({ username, jobTitle, setUsername, setJobTitle }) => {
             <Stack>
             <Flex align="center">
                 <Text marginRight="2" color="gray.600" as="b">Username: </Text>
-                <Editable value={username} placeholder="Click to set username" onChange={handleUsernameChange}>
+                <Editable value={username || ''} placeholder="Click to set username" onChange={handleUsernameChange}>
                     <EditablePreview />
                     <EditableInput />
                 </Editable>
             </Flex>
             <Flex align="center">
                 <Text marginRight="2" color="gray.600" as="b">Job Title: </Text>
-                <Editable value={jobTitle} placeholder="Click to set job title" onChange={handleJobTitleChange}>
+                <Editable value={jobTitle || ''} placeholder="Click to set job title" onChange={handleJobTitleChange}>
                     <EditablePreview />
                     <EditableInput />
                 </Editable>

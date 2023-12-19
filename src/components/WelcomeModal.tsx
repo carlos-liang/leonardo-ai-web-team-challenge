@@ -15,9 +15,9 @@ import UserDisplay from './UserDisplay';
 import { KeyboardEvent } from "react"
 
 const WelcomeModal = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
     const [username, setUsername] = useState('');
     const [jobTitle, setJobTitle] = useState('');
+    const { isOpen, onOpen, onClose } = useDisclosure();
     const [isFirstSlide, setIsFirstSlide] = useState(true);
 
     useEffect(() => {
@@ -62,14 +62,14 @@ const WelcomeModal = () => {
                         {isFirstSlide ? (
                             <Input
                                 placeholder="Enter username"
-                                value={username}
+                                value={username || ''}
                                 onChange={(e) => setUsername(e.target.value)}
                                 onKeyDown={handleEnterPress()}
                             />
                         ) : (
                             <Input
                                 placeholder="Enter job title"
-                                value={jobTitle}
+                                value={jobTitle || ''}
                                 onChange={(e) => setJobTitle(e.target.value)}
                                 onKeyDown={handleEnterPress()}
                             />
